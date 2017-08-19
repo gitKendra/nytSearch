@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+        'api-key': "811d7a26575f4e21a01fb0d7a9224415"
+        });
+            $.ajax({
+                url: url,
+                method: 'GET',
+            }).done(function(response) {
+                //populate code here!!!
+                console.log(response);
+                console.log(response.response.docs[0].web_url);
+
+
+
+
+
+            }).fail(function(err) {
+                throw err;
+            });
+
+    </script>
+</head>
+<body>
+
+<!-- <script></script> -->
+</body>
+</html>
