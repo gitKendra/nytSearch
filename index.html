@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -12,8 +13,8 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	
 	<link rel="stylesheet" type="text/css" href="style.css">
+
 
 </head>
 <body>
@@ -85,5 +86,30 @@
 
 	</div>  <!-- CLOSES THE WRAPPER -->
 	
+
+   <script type="text/javascript">
+        var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+        url += '?' + $.param({
+        'api-key': "811d7a26575f4e21a01fb0d7a9224415"
+        });
+            $.ajax({
+                url: url,
+                method: 'GET',
+            }).done(function(response) {
+                //populate code here!!!
+                console.log(response);
+                console.log(response.response.docs[0].web_url);
+
+
+
+
+
+            }).fail(function(err) {
+                throw err;
+            });
+
+    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 </body>
 </html>
