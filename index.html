@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript">
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+	<div class="wrapper">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="jumbotron">
+				  <h1>NEW YORK TIMES SEARCH</h1>
+				</div>
+			</div>
+			<div class="col-md-2"></div>	
+		</div>
+
+		<!-- SEARCH PARAMETER PANEL -->
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div id="search-parameter" class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Panel title</h3>
+				  </div>
+				  <div class="panel-body">
+				    	<form>
+						  <div class="form-group">
+						    <label for="exampleInputEmail1">Search Term</label>
+						    <input type="text" class="form-control" id="search-term">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">Number of Records to Retrieve</label>
+						    <input type="text" class="form-control" id="records-retrieve">
+						  </div>
+						   <div class="form-group">
+						    <label for="exampleInputPassword1">Start Year</label>
+						    <input type="text" class="form-control" id="start-year">
+						  </div>
+						  <div class="form-group">
+						    <label for="exampleInputPassword1">End Year</label>
+						    <input type="text" class="form-control" id="end-year">
+						  </div>
+						  
+						  <button id="submit" type="submit" class="btn btn-default">Search</button>
+						  <button id="clear" class="btn btn-default">Clear Results</button>
+						</form>
+				  </div>
+				  
+				</div>
+			</div>
+			<div class="col-md-2"></div>	
+		</div>
+
+		<!-- TOP ARTICLES -->
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<div class="panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">Panel title</h3>
+				  </div>
+				  <div class="panel-body">
+				    Panel content
+				  </div>
+				</div>
+			</div>
+			<div class="col-md-2"></div>	
+		</div>
+
+
+	</div>  <!-- CLOSES THE WRAPPER -->
+	
+
+   <script type="text/javascript">
         var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
         url += '?' + $.param({
         'api-key': "811d7a26575f4e21a01fb0d7a9224415"
@@ -28,9 +109,7 @@
             });
 
     </script>
-</head>
-<body>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- <script></script> -->
 </body>
 </html>
